@@ -10,7 +10,8 @@ promise.then((value) => {
   console.log('PROMISE', value);
 });
 
-// Simple promise-like observable that emits once and completes
+//! Simple promise-like observable that emits once and completes
+
 // of('Hola').subscribe((value) => {
 //   console.log('OF', value);
 // });
@@ -34,7 +35,7 @@ promise.then((value) => {
 //   },
 // });
 
-// Observable that emits one error
+//! Observable that emits one error
 // throwError('ERROR').subscribe(undefined, (value) => {
 //   console.log('ERROR THROW_ERROR', value);
 // });
@@ -45,7 +46,8 @@ promise.then((value) => {
 //   },
 // });
 
-// Observable that only completes
+//! Observable that only completes
+
 // EMPTY.subscribe(undefined, undefined, () => {
 //   console.log('COMPLETE EMPTY');
 // });
@@ -56,7 +58,8 @@ promise.then((value) => {
 //   },
 // });
 
-// turns any iterable or Promise into a Observable
+//! Turn any iterable or Promise into a Observable
+
 // from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).subscribe((value) => {
 //   console.log('FROM num array', value);
 // });
@@ -69,7 +72,8 @@ promise.then((value) => {
 //   console.log('FROM promise:', value);
 // });
 
-// Observable that emits every 500ms. Never completes
+//! Observable that emits every 500ms. Never completes
+
 // interval(500).subscribe((value) => {
 //   console.log('INTERVAL', value);
 // });
