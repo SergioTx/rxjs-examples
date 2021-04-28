@@ -1,6 +1,6 @@
 # RxjsExamples
 
-This project consists on a series of common RxJs examples to show common use cases.
+This project consists on a series of RxJs examples to show common use cases.
 
 It's mostly focused in using the library without Angular, but it also contains some Angular examples with services and the async pipe.
 
