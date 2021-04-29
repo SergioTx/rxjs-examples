@@ -19,14 +19,14 @@ const completeSecondSource = from([6, 7, 8, 9, 10]);
 
 //! obtain latest from another observable
 
-// source
-//   .pipe(
-//     withLatestFrom(secondSource),
-//     map(([first, second]) => {
-//       return `First Source (5s): ${first} Second Source (1s): ${second}`;
-//     })
-//   )
-//   .subscribe((val) => console.log(val));
+source
+  .pipe(
+    withLatestFrom(secondSource),
+    map(([first, second]) => {
+      return `First Source (5s): ${first} Second Source (1s): ${second}`;
+    })
+  )
+  .subscribe((val) => console.log(val));
 
 //! when one emits, emit the last value from each
 
@@ -127,17 +127,17 @@ OUTER Subscription second:3
 
 //! concatMap waits until inner observable completes to continue with outer emission
 
-sourceMapped
-  .pipe(
-    concatMap((value) => {
-      console.log('INNER Subscription', value);
-      // return a new observable
-      return completeSource;
-    })
-  )
-  .subscribe((value) => {
-    console.log('OUTER Subscription', value);
-  });
+// sourceMapped
+//   .pipe(
+//     concatMap((value) => {
+//       console.log('INNER Subscription', value);
+//       // return a new observable
+//       return completeSource;
+//     })
+//   )
+//   .subscribe((value) => {
+//     console.log('OUTER Subscription', value);
+//   });
 
 /*
 INNER Subscription first:0

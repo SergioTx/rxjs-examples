@@ -1,13 +1,13 @@
 import { AsyncSubject, BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 
-// const subject = new Subject<number>();
-// subject.subscribe((value) => {
-//   console.log('SUBJECT', value);
-// });
-// subject.next(1);
-// subject.next(2);
-// subject.next(3);
-// subject.complete();
+const subject = new Subject<number>();
+subject.subscribe((value) => {
+  console.log('SUBJECT', value);
+});
+subject.next(1);
+subject.next(2);
+subject.next(3);
+subject.complete();
 
 //! Subject subscription order
 
@@ -75,19 +75,19 @@ import { AsyncSubject, BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 
 //! Other kind of subjects -> AsyncSubject: emits last value on completion only
 
-const asyncSubject = new AsyncSubject();
-asyncSubject.next(1);
-asyncSubject.next(2);
-asyncSubject.next(3);
-asyncSubject.next(4);
-asyncSubject.subscribe((value) => {
-  console.log('ASYNC_SUBJECT', value);
-});
-asyncSubject.next(5); // nothing logged
-asyncSubject.next(6); // nothing logged
-asyncSubject.subscribe((value) => {
-  console.log('ASYNC_SUBJECT Second sub', value);
-});
+// const asyncSubject = new AsyncSubject();
+// asyncSubject.next(1);
+// asyncSubject.next(2);
+// asyncSubject.next(3);
+// asyncSubject.next(4);
+// asyncSubject.subscribe((value) => {
+//   console.log('ASYNC_SUBJECT', value);
+// });
+// asyncSubject.next(5); // nothing logged
+// asyncSubject.next(6); // nothing logged
+// asyncSubject.subscribe((value) => {
+//   console.log('ASYNC_SUBJECT Second sub', value);
+// });
 
-asyncSubject.next(7); // nothing logged
-asyncSubject.complete(); // logged 7 in both subcribers
+// asyncSubject.next(7); // nothing logged
+// asyncSubject.complete(); // logged 7 in both subcribers

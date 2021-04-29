@@ -16,9 +16,10 @@ import {
 const INTERVAL = 1000;
 
 //! basic subscription
-// interval(INTERVAL).subscribe((value) => {
-//   console.log('CONTROL INTERVAL', value);
-// });
+
+interval(INTERVAL).subscribe((value) => {
+  console.log('CONTROL INTERVAL', value);
+});
 
 //! filter the emitter
 
