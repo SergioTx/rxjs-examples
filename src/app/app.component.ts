@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { TestService } from './test.service';
 
